@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Force-Directed Layout</title>
+{#    <script type="text/javascript" src="{{ url_for('static', filename='d3/d3.min.js') }}"></script>#}
+{#    <script type="text/javascript" src="{{ url_for('static', filename='d3/d3.layout.min.js') }}"></script>#}
+{#    <script type="text/javascript" src="{{ url_for('static', filename='d3/d3.geo.min.js') }}"></script>#}
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='force.css') }}"/>
+
+  </head>
+  <body>
+    <div id="chart">
+    </div>
+    <div id="info">
+        <div id="point-info">
+            Click on a point.
+        </div>
+    </div>
+
+    <div id="plot">
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/force.js') }}">
+     </script>
+    <script type="text/javascript"> d3.json("/data", callback)  </script>
+  </body>
+</html>
